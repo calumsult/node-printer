@@ -29,6 +29,10 @@
         "-Wno-deprecated-declarations"
       ],
       'conditions': [
+        ['OS == "win"', {
+        'defines': [
+          'NOMINMAX',
+        ]}],
         # common exclusions
         ['OS!="linux"', {'sources/': [['exclude', '_linux\\.cc$']]}],
         ['OS!="mac"', {'sources/': [['exclude', '_mac\\.cc|mm?$']]}],
